@@ -6,7 +6,7 @@ public class Functions {
         return !(A && B);
     }
 
-    private static boolean NOT(boolean A) {
+    static boolean NOT(boolean A) {
         return NAND(A, A);
     }
 
