@@ -7,6 +7,11 @@ public class FlipFlop {
     GatedDLatch exit = new GatedDLatch();
 
     public void calculate(boolean clock, boolean D) {
+        calculateOnce(clock, D);
+        calculateOnce(clock, D);
+    }
+
+    private void calculateOnce(boolean clock, boolean D) {
         entry.calculate(clock, D);
         exit.calculate(NOT(clock), entry.getQ());
     }
